@@ -103,3 +103,5 @@ venv.bak/
 # mypy
 .mypy_cache/
 LittlePrograms/game.py
+LittlePrograms/Untitled-1.txt
+Turtle.py
