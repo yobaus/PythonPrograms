@@ -52,8 +52,6 @@ class Weather:
                 temp_max = self.NumberFix((part['main']['temp_max']))
                 temp_min = self.NumberFix((part['main']['temp_min']))
                 weather_list = []
-        self.Forrcast.append([temp_date, temp_max, temp_min,
-                              (self.most_frequent(weather_list))])
 
     def most_frequent(self, List):
         return max(set(List), key=List.count)
@@ -112,6 +110,7 @@ def Month(Number):
 
 if __name__ == '__main__':
     Today = Weather((input('What is your zip code?: ')))
+    print(len(Today.Forrcast))
     for day in Today.Forrcast:
         print(
             f"On {DayoftheWeek(day[0][6])}, The {day[0][2]} of {Month(day[0][1])} expect {day[3]} with a Hight of {day[1]}F and a low of {day[2]}F \n\n")

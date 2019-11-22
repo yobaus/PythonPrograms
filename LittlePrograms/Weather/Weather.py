@@ -262,7 +262,7 @@ class Root:
         #Gets the weather Report and configs the lable to display it
         if self.ZipEntry.get():
             WeatherReport = WhatsTheWeather.Weather(self.ZipEntry.get())
-            self.CityNameLable.configure(text='WeatherReport.City_Name')
+            self.CityNameLable.configure(text=WeatherReport.City_Name)
             
             self.DayLabbel1.configure(text=f"{WhatsTheWeather.DayoftheWeek(WeatherReport.Forrcast[0][0][6])} \n {WhatsTheWeather.Month(WeatherReport.Forrcast[0][0][1])} {(WeatherReport.Forrcast[0][0][2])}")
             self.WeatherConditions1.configure(text=f"{WeatherReport.Forrcast[0][3]}")
